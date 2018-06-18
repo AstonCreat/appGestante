@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gestante"
+    tools:context=".activity_configuracoes">
+
+    <include
+        android:id="@+id/toolbarPrincipal"
+        layout="@layout/toollbar_principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgButtonGaleria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toStartOf="@+id/circleImagePerfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPrincipal"
+        app:srcCompat="@drawable/galeria_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/imgButtonCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circleImagePerfil"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPrincipal"
+        app:srcCompat="@drawable/camera_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImagePerfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/gestanteft"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPrincipal" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/circleImagePerfil"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="64dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/nome_completo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColorHint="#fff">
+
+                <EditText
+                    android:id="@+id/confNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
+                    android:hint="@string/nomeCompleto"
+                    android:inputType="textPersonName|textCapWords"
+                    android:textColor="@android:color/white" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/data_nasc"
+                android:layout_width="170dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/nome_completo"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#fff">
+
+                <EditText
+                    android:id="@+id/data_nasci"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/labelSexo"
+                    android:layout_toStartOf="@+id/labelSexo"
+                    android:backgroundTint="@android:color/white"
+                    android:hint="@string/nasc"
+                    android:inputType="number"
+                    android:textColor="@android:color/white" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/data_mestruacao"
+                android:layout_width="170dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/data_nasc"
+                android:layout_marginEnd="9dp"
+                android:textColorHint="#fff">
+
+                <EditText
+                    android:id="@+id/data_ciclo"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:backgroundTint="@android:color/white"
+                    android:hint="@string/ultimo_ciclo"
+                    android:inputType="number"
+                    android:textColor="@android:color/white" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/qtdidade"
+                android:layout_width="170dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/data_nasc"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#fff">
+
+                <EditText
+                    android:id="@+id/idade"
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
+                    android:hint="@string/idade"
+                    android:inputType="number"
+                    android:textColor="@android:color/white" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tipoSangue"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/data_mestruacao"
+                android:layout_alignTop="@+id/qtdidade"
+                android:text="@string/tipo_sangu_nio"
+                android:textColor="@android:color/white"></TextView>
+
+            <Spinner
+                android:id="@+id/sangueRec"
+                android:layout_width="169dp"
+                android:layout_height="38dp"
+                android:layout_alignStart="@+id/tipoSangue"
+                android:layout_below="@+id/tipoSangue"
+                android:backgroundTint="@android:color/black"
+                android:entries="@array/tiposangue"
+                android:inputType="textPersonName"
+                android:textColor="@color/white" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/qtdidade"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#fff">
+
+                <EditText
+                    android:id="@+id/numCelular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
+                    android:hint="@string/celular"
+                    android:inputType="number"
+                    android:textColor="@android:color/white" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_alterGestante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cel"
+                android:text="@string/salvar"
+                android:background="@drawable/btn_verde"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_bg"
+    tools:context="com.example.italo.gestante.fragment.ConsultaFragment">
+
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+       android:layout_marginTop="10dp"
+        android:id="@+id/titleConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/doctorman"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="@string/marca_consulta"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_below="@id/titleConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/MyCustomLabelText"
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            app:hintTextAppearance="@style/MyCustomLabelText">
+
+            <EditText
+                android:id="@+id/dataC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:hint="Data:"
+                android:inputType="number"
+                android:textColor="@android:color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/MyCustomLabelText"
+            android:layout_below="@id/data"
+            android:id="@+id/hora_consulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            app:hintTextAppearance="@style/MyCustomLabelText">
+
+            <EditText
+                android:id="@+id/horaC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:hint="Hora:"
+                android:inputType="number"
+                android:textColor="@android:color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/MyCustomLabelText"
+            android:layout_below="@id/hora_consulta"
+            android:id="@+id/local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black">
+
+            <EditText
+                android:id="@+id/localC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:hint="Local:"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/MyCustomLabelText"
+            android:layout_below="@id/local"
+            android:id="@+id/especialidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            app:hintTextAppearance="@style/MyCustomLabelText">
+
+            <EditText
+                android:id="@+id/especialidadeC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:hint="Especialidade:"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/MyCustomLabelText"
+            android:layout_below="@id/especialidade"
+            android:id="@+id/medico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            app:hintTextAppearance="@style/MyCustomLabelText">
+
+            <EditText
+                android:id="@+id/medicoC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:hint="Médico:"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/medico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnCancelarConsulta"
+                android:layout_alignParentBottom="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btnfechar"
+                android:text="@string/cancelar"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id="@+id/btnSalvarC"
+                android:layout_alignParentBottom="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_verde"
+                android:text="@string/marcar"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

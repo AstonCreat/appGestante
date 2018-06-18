@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gestante"
+    tools:context="com.example.italo.gestante.Dados_Pessoais_Gestante">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbrar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/nome_completo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/nomeCompleto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/branca"
+                    android:hint="@string/nomeCompleto"
+                    android:inputType="textPersonName|textCapWords"
+                    android:textColor="@color/branca" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/data_nasc"
+                android:layout_width="170dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/nome_completo"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/data_nasci"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/labelSexo"
+                    android:layout_toStartOf="@+id/labelSexo"
+                    android:backgroundTint="@color/branca"
+                    android:hint="@string/nasc"
+                    android:inputType="number"
+                    android:textColor="@color/branca" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/sexo"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/nome_completo"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/tipo_sexo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/labelSexo"
+                    android:layout_toStartOf="@+id/labelSexo"
+                    android:backgroundTint="@color/branca"
+                    android:hint="@string/sexo"
+                    android:inputType="textPersonName"
+                    android:text="Feminino"
+                    android:textColor="@color/branca" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/qtdidade"
+                android:layout_width="170dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/data_nasc"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/idade"
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/branca"
+                    android:hint="@string/idade"
+                    android:inputType="number"
+                    android:textColor="@color/branca" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tipoSangue"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/sexo"
+                android:layout_marginTop="10dp"
+                android:text="@string/tipo_sangu_nio"
+                android:textColorHint="#cccccc"></TextView>
+
+            <Spinner
+                android:id="@+id/sangue"
+                android:layout_width="182dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tipoSangue"
+                android:backgroundTint="@color/branca"
+                android:entries="@array/tiposangue"
+                android:inputType="textPersonName"
+                android:textColor="@color/branca" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ciclo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/qtdidade"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/data_ciclo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/branca"
+                    android:hint="@string/ultimo_ciclo"
+                    android:inputType="number"
+                    android:textColor="@color/branca" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/ciclo"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/numCelular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/branca"
+                    android:hint="@string/celular"
+                    android:inputType="number"
+                    android:textColor="@color/branca" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/cel"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/cademail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/branca"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/branca" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/senha"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/email"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#cccccc">
+
+                <EditText
+                    android:id="@+id/cadsenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/branca"
+                    android:hint="@string/senha"
+                    android:inputType="textPassword"
+                    android:textColor="@color/branca" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_below="@+id/senha"
+                android:id="@+id/cadGestante"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_verde"
+                android:gravity="center"
+                android:text="@string/salvar"
+                android:textColor="@android:color/white"
+                android:textSize="10dp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

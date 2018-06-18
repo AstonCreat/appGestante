@@ -1,0 +1,78 @@
+<resources>
+    <string name="sucess_Cad">Cadastro realizado com sucesso</string>
+    <string name="negative_Cad">Não foi possivel concluir seu cadastro </string>
+    <string name="app_name">Gestante</string>
+    <string name="titulo">APP GESTANTE</string>
+    <string name="cad">Não possui cadastro?</string>
+    <string name="btnContinuar">CONTINUAR</string>
+    <string name="btnCad">CADASTRAR</string>
+    <string name="btnFechar">Fechar</string>
+    <string name="slcGestante">Gestante</string>
+    <string name="slcMedico">Médico</string>
+    <string name="txtAlert">Selecione o tipo de cadastro que deseja fazer...</string>
+    <string name="recupera_senha">Esqueci minha senha?</string>
+    <string name="logar">Logar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_cad_medico">CadMedico</string>
+
+    <string name="cadastroMedico">Cadastro</string>
+    <string name="data_Endereco">Endereço</string>
+    <string name="camera">Foto</string>
+    <string name="reg_medico">Registro Medico</string>
+    <string name="frase_reset">Informe seu E-mail para redefinir sua senha.</string>
+    <string name="reset_senha">Enviar E-mail</string>
+    <string name="email">E-mail</string>
+    <string name="crm">CRM</string>
+    <string name="nasc">Data Nascimento</string>
+    <string name="nomeCompleto">Nome Completo</string>
+    <string name="sexo">Sexo</string>
+    <string name="sangue">Tipo sanguínio</string>
+
+    <string name="wifinegado">Não foi possivel Estabelecer conexão.Verifique se está com WI-FI ligado ou DADOS MOVEIS.</string>
+
+    <string-array name="tiposangue">
+        <item>A+</item>
+        <item>A-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+
+
+    <string name="psw_sucess">E-mail enviado com sucesso</string>
+    <string name="psw_negative">E-mail errado ou não cadastrado</string>
+    <string name="chat">Chat</string>
+    <string name="alertas">Alertas da Gestação</string>
+    <string name="agendar_consulta">Agendar consulta</string>
+    <string name="agendar_vacina">Agendar Vacina</string>
+    <string name="data_previl_nasc_bebe">Data prevista para nascimento do bebê</string>
+    <string name="tipo_sangu_nio">Tipo sanguíneo</string>
+
+    <string name="idade">Idade</string>
+
+    <string name="marcar">Marcar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="marca_consulta">Marcar Consulta</string>
+    <string name="marcar_vacina">Marcar vacina</string>
+    <string name="tipo_vacina">Tipo vacina:</string>
+
+
+    //mensagem de erro
+    <string name="msg_erro_nome">Campo Obrigatorio</string>
+    <string name="msg_erro_dataNasc">data esta incorreta ou incompleta</string>
+    <string name="msg_erro_cpf">CPF esta incorreta ou incompleta</string>
+    <string name="msg_erro_celular">Celualr esta incorreta ou incompleta</string>
+
+
+    <string name="salvar">Salvar</string>
+    <string name="ultimo_ciclo">ultimo ciclo</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="especialidade">Especialidade</string>
+    <string name="senha">senha</string>
+    <string name="celular">Celular</string>
+</resources>

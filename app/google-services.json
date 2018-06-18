@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "175126464465",
+    "firebase_url": "https://projeto-tcc-gestante-ca152.firebaseio.com",
+    "project_id": "projeto-tcc-gestante-ca152",
+    "storage_bucket": "projeto-tcc-gestante-ca152.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175126464465:android:a6574af656326442",
+        "android_client_info": {
+          "package_name": "com.example.italo.gestante"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175126464465-7u4frq4keci063scdpaas71jhuff3fj6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.italo.gestante",
+            "certificate_hash": "86a2d38b0d148a9b698c24cf10b30593e05bd3b7"
+          }
+        },
+        {
+          "client_id": "175126464465-6618v01mani54l6u6vned1nn9odff2ut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQIQsq7TU4RyY6CZcpwEiyqzLG45XsYn8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175126464465-6618v01mani54l6u6vned1nn9odff2ut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

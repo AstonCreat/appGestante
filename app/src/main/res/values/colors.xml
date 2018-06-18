@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0b4396</color>
+    <color name="toobar">#24000000</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#186b00</color>
+    <color name="branca">#fff</color>
+    <color name="btn_cad">#004E8A</color>
+    <color name="btn_fechar">#AC0303</color>
+    <color name="white">#FFFFFF</color>
+    <color name="btn_doctor">#35FFFFFF</color>
+    <color name="linhaLogin">#006BBE</color>
+    <color name="resetPsw">#1A237E</color>
+    <color name="btnwifi">#ff669900</color>
+    <color name="roxoDark">#6A1B9A</color>
+    <color name="roxolight">#7B1FA2</color>
+    <color name="grayPerson">#1c7c7c7c</color>
+    <color name="balaoRemetente">#dbf9c4</color>
+    <color name="alert">#7c8b8b8b</color>
+</resources>

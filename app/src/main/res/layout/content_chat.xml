@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_chat"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ChatActivity"
+    tools:showIn="@layout/activity_chat">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleMensagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="6dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="6dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:background="@drawable/fundo_mensagem_chat"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:elevation="2dp">
+
+            <EditText
+                android:id="@+id/edtMEnsagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Digite aqui seu texto..."
+                style="@style/StyledTilEditText"
+                android:textColor="@android:color/black"
+                android:inputType="textPersonName"
+                android:background="@color/white"/>
+
+            <ImageView
+                android:id="@+id/imageViewCameraChat"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_photo_camera_black_24dp" />
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="fabEnviar"
+            app:backgroundTint="@color/colorAccent"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/enviar_branco_24dp" />
+    </LinearLayout>
+</LinearLayout>

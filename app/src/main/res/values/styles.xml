@@ -1,0 +1,96 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/branca</item>
+    </style>
+
+
+
+    <style name="MyCustomTabMenu" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/linhaLogin</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextMenu</item>
+        <item name="tabSelectedTextColor">@android:color/black</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:itemBackground">@android:color/black</item>
+    </style>
+
+    <style name="MyCustomTabMenuPrincipal" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/linhaLogin</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextMenu</item>
+        <item name="tabSelectedTextColor">@android:color/black</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:itemBackground">@android:color/black</item>
+    </style>
+    <style name="MyCustomTabTextMenu" parent="TextAppearance.Design.Tab">
+        <!--<item name="android:textSize">14sp</item>-->
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
+        <!--<item name="android:textSize">14sp</item>-->
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    //Form
+
+    <style name="MyCustomLabelText" parent="TextAppearance.AppCompat">
+        <!--<item name="android:textSize">14sp</item>-->
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@android:color/black</item>
+        <item name="colorAccent">@android:color/black</item>
+        <item name="colorControlNormal">@android:color/black</item>
+        <item name="colorControlHighlight">@android:color/black</item>
+    </style>
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    //chexbox
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/black</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+    //Spinner
+
+    <style name="MyItemSpinner" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@android:color/black</item>
+
+    </style>
+
+    <style name="MyDropDownItemSpinner" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="MyCustomDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+        <item name="colorAccent">@color/btnwifi</item>
+
+    </style>
+
+    //EditText chat
+    <style name="StyledTilEditTextTheme">
+        <item name="colorControlNormal">@android:color/black</item> // Cor padrão da linha
+        <item name="colorControlActivated">@color/colorAccent</item> // Cor linha e texto quando recebe foco
+    </style>
+
+    <style name="StyledTilEditText">
+        <item name="android:theme">@style/StyledTilEditTextTheme</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item> // Cor texto(hint) sem foco
+    </style>
+
+
+</resources>

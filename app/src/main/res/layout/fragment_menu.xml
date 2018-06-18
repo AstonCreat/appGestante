@@ -1,0 +1,226 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context="com.example.italo.gestante.fragment.Menu">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textPrevilnasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/data_previl_nasc_bebe"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/dataProvavel"
+            android:layout_below="@+id/textPrevilnasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15 julho de 2018"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+        <ScrollView
+            android:layout_below="@+id/dataProvavel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <GridLayout
+                    android:layout_weight="20"
+                    android:columnCount="2"
+                    android:alignmentMode="alignMargins"
+                    android:columnOrderPreserved="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--Linha 1-->
+                    <!--Coluna 1-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/imgChat"
+                        app:cardBackgroundColor="@android:color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="135dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/chat"/>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/chat"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                    <!--Coluna 2-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/alertGestante"
+                        app:cardBackgroundColor="@android:color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="135dp"
+                        android:layout_columnWeight="1"
+
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:src="@drawable/warning"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/alertas"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--Linha 2-->
+                    <!--Coluna 3-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/imgClipBoard"
+                        app:cardBackgroundColor="@android:color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="135dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/clipboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/agendar_consulta"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                    <!--Coluna 4-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/imgsiringa"
+                        app:cardBackgroundColor="@android:color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="135dp"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/syringe"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/agendar_vacina"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </GridLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

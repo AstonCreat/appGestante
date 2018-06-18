@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_bg"
+    tools:context="com.example.italo.gestante.fragment.VacinaFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/titleConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/syringe"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/marcar_vacina"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_below="@id/titleConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/MyCustomLabelText"
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            app:hintTextAppearance="@style/MyCustomLabelText">
+
+            <EditText
+                android:id="@+id/dataVacina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:hint="Data:"
+                android:inputType="number"
+                android:textColor="@android:color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/MyCustomLabelText"
+            android:layout_below="@id/data"
+            android:id="@+id/hora_consulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            app:hintTextAppearance="@style/MyCustomLabelText">
+
+            <EditText
+                android:id="@+id/horaVacina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:hint="Hora:"
+                android:inputType="number"
+                android:textColor="@android:color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/MyCustomLabelText"
+            android:layout_below="@id/hora_consulta"
+            android:id="@+id/tipovacina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            app:hintTextAppearance="@style/MyCustomLabelText">
+
+            <EditText
+                android:id="@+id/vacinaTipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:hint="Tipo da vacina:"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_below="@+id/tipovacina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnCancelarVacina"
+                android:layout_alignParentBottom="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btnfechar"
+                android:text="@string/cancelar"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id="@+id/btnSalvarVacina"
+                android:layout_alignParentBottom="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_verde"
+                android:text="@string/marcar"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

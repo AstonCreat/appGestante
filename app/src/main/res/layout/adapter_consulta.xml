@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    android:padding="10dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/doctorman" />
+
+        <TextView
+            android:id="@+id/NomeConsulta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="63dp"
+            android:text="Consulta"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iconlocaltion"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/NomeConsulta"
+            android:background="@drawable/ic_location_on_black_24dp" />
+
+        <TextView
+            android:id="@+id/localConsulta"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/iconlocaltion"
+            android:layout_marginRight="-100dp"
+            android:text="local"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/secondary_text_dark_nodisable"
+            android:textSize="9dp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toStartOf="@+id/dataConsulta"
+            android:adjustViewBounds="false"
+            android:background="@drawable/ic_event_available_black_24dp"
+            android:cropToPadding="false" />
+
+        <TextView
+            android:id="@+id/dataConsulta"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:text="data"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="9dp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/dataConsulta"
+            android:background="@drawable/ic_schedule_black_24dp" />
+
+        <TextView
+            android:id="@+id/horaConsulta"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/dataConsulta"
+            android:layout_marginTop="35dp"
+            android:text="hora"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="9dp" />
+
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_below="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        layout="@layout/divisor"/>
+</LinearLayout>
+
+
+
+
+</RelativeLayout>
