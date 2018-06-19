@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -127,7 +128,8 @@ public class Dados_Pessoais_Gestante extends AppCompatActivity {
         String textoTipoSangue = tipoSangue.getSelectedItem().toString();
         String textoEmail = email.getText().toString();
         String textoSenha = senha.getText().toString();
-        String textoCiclo = ciclo.getText().toString();
+        String transformaData = ciclo.getText().toString();
+        String textoCiclo = calcData(transformaData);
 
         if (!textoNome.isEmpty()){
             if (!textoDatnasc.isEmpty()){
@@ -241,6 +243,95 @@ public class Dados_Pessoais_Gestante extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    public String calcData(String data) {
+        String diafinal, mesFinal;
+        int diasdoMes =0;
+
+        int mesArray[];
+        mesArray = new int[13];
+        mesArray[0] = 0;
+        mesArray[1] = 31;
+        mesArray[2] = 28;
+        mesArray[3] = 31;
+        mesArray[4] = 30;
+        mesArray[5] = 31;
+        mesArray[6] = 30;
+        mesArray[7] = 31;
+        mesArray[8] = 31;
+        mesArray[9] = 30;
+        mesArray[10] = 31;
+        mesArray[11] = 30;
+        mesArray[12] = 31;
+
+        Log.i("Entrada", "dataNova: " + data);
+        int dia = Integer.parseInt(data.substring(0, 2));
+        int mes = Integer.parseInt(data.substring(3, 5));
+        int ano = Integer.parseInt(data.substring(6, 10));
+
+
+        int diaAtual = dia + 7;
+        int mesAtual = 0;
+        int anoAtual = 0;
+
+        if (mes <= 3) {
+            mesAtual = mes + 9;
+            if (mesAtual >= 12) {
+                //pegando quantidade de dias da variavel => mes;
+                for (int i = 0; i < mesArray.length; i++) {
+                    if (mesAtual == i) {
+                        System.out.println(i + "ª:" + mesArray[i]);
+                        diasdoMes = mesArray[i];
+                    }
+                    //System.out.println(i+"ª:"+mesArray[i]);
+                }
+                diaAtual = diaAtual - diasdoMes;
+                mesAtual = (mesAtual + 1) - (12);
+                anoAtual = ano + 1;
+            } else if (mesAtual < 12) {
+                mesAtual = mesAtual + 1;
+                for (int i = 0; i < mesArray.length; i++) {
+                    if (mesAtual == i) {
+                        System.out.println(i + "ª:" + mesArray[i]);
+                        diasdoMes = mesArray[i];
+                    }
+                }
+                diaAtual = diasdoMes - dia;
+            }
+            diaAtual = diaAtual;
+            anoAtual = ano;
+
+        } else {
+            mesAtual = mes - 3;
+            anoAtual = ano + 1;
+            if (diaAtual > 30 || diaAtual > 31) {
+                mesAtual = mesAtual + 1;
+                for (int i = 0; i < mesArray.length; i++) {
+                    if (mesAtual == i) {
+                        System.out.println(i + "ª:" + mesArray[i]);
+                        diasdoMes = mesArray[i];
+                    }
+                }
+                diaAtual = diaAtual - diasdoMes;
+            } else {
+                mesAtual = mes - 3;
+                anoAtual = ano;
+
+            }
+            diafinal = Integer.toString(diaAtual);
+            mesFinal = Integer.toString(mesAtual);
+            if (diafinal.length() < 2) {
+                diafinal = "0"+diafinal;
+            }
+            if ( mesFinal.length() < 2) {
+                mesFinal = "0"+mesFinal;
+            }
+            Log.i("Saida", "dataNova: " + diafinal+"/" +mesFinal+ "/"+anoAtual);
+            data = diafinal+"/" +mesFinal+ "/"+anoAtual;
+
+        }
+        return data;
     }
 
 

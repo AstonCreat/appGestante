@@ -51,7 +51,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class activity_configuracoes extends AppCompatActivity {
 
-    int progressState =0;
+    int progressState = 0;
 
     private Toolbar toolbar;
 
@@ -63,7 +63,7 @@ public class activity_configuracoes extends AppCompatActivity {
 
     private ImageButton imgbtCamera, imgbtGaleria;
     private CircleImageView imgPerfil;
-    private EditText edtNome, edtNum, edtNasc, edtIdade,edtCiclo;
+    private EditText edtNome, edtNum, edtNasc, edtIdade, edtCiclo;
     private Button btnSalvar;
     private StorageReference storageReference;
     private String identUser;
@@ -166,53 +166,54 @@ public class activity_configuracoes extends AppCompatActivity {
 
                 String nome = edtNome.getText().toString();
                 String celular = edtNum.getText().toString();
-                String idade =  edtIdade.getText().toString();
-                String data =  edtNasc.getText().toString();
+                String idade = edtIdade.getText().toString();
+                String data = edtNasc.getText().toString();
                 String ciclo = calcData(trasnformeData);
 
 
-                if (!nome.isEmpty()){
-                    if (!data.isEmpty()){
+
+                if (!nome.isEmpty()) {
+                    if (!data.isEmpty()) {
                         try {
                             Date date = df.parse(data);
-                                if(!ciclo.isEmpty()){
-                                    try {
-                                        Date dateCiclo = cl.parse(ciclo);
-                                            if (!idade.isEmpty()){
-                                                if (!idade.isEmpty()){
-                                                    boolean retorno = UsuarioFireBase.atualizarNomeUser(nome);
-                                                    if (retorno){
-                                                        userLogado.setNomeC(nome);
-                                                        userLogado.setCelular(celular);
-                                                        userLogado.setIdade(idade);
-                                                        userLogado.setDataNAsc(data);
-                                                        userLogado.setDataBB(ciclo);
+                            if (!ciclo.isEmpty()) {
+                                try {
+                                    Date dateCiclo = cl.parse(ciclo);
+                                    if (!idade.isEmpty()) {
+                                        if (!idade.isEmpty()) {
+                                            boolean retorno = UsuarioFireBase.atualizarNomeUser(nome);
+                                            if (retorno) {
+                                                userLogado.setNomeC(nome);
+                                                userLogado.setCelular(celular);
+                                                userLogado.setIdade(idade);
+                                                userLogado.setDataNAsc(data);
+                                                userLogado.setDataBB(ciclo);
+                                                Log.i("ciclo", "ciclo: "+ciclo);
+                                                userLogado.updadteDadosFireBase();
 
-                                                        userLogado.updadteDadosFireBase();
-
-                                                        Toast.makeText(activity_configuracoes.this, "Dados atualizados com sucesso", Toast.LENGTH_SHORT).show();
-                                                    }else{
-                                                        Toast.makeText(activity_configuracoes.this, "Dados não foram atualizados", Toast.LENGTH_SHORT).show();
-                                                    }
-                                                }else {
-                                                    Toast.makeText(activity_configuracoes.this, "Preencha campo celular", Toast.LENGTH_SHORT).show();
-                                                }
-                                            }else {
-                                                Toast.makeText(activity_configuracoes.this, "Preencha campo data", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(activity_configuracoes.this, "Dados atualizados com sucesso", Toast.LENGTH_SHORT).show();
+                                            } else {
+                                                Toast.makeText(activity_configuracoes.this, "Dados não foram atualizados", Toast.LENGTH_SHORT).show();
                                             }
-                                    }catch (ParseException e){
-                                        Toast.makeText(activity_configuracoes.this, "Data de ciclo incorreta!! ", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(activity_configuracoes.this, "Preencha campo celular", Toast.LENGTH_SHORT).show();
+                                        }
+                                    } else {
+                                        Toast.makeText(activity_configuracoes.this, "Preencha campo data", Toast.LENGTH_SHORT).show();
                                     }
-                                }else{
-                                    Toast.makeText(activity_configuracoes.this, "Preencha campo ciclo", Toast.LENGTH_SHORT).show();
+                                } catch (ParseException e) {
+                                    Toast.makeText(activity_configuracoes.this, "Data de ciclo incorreta!! ", Toast.LENGTH_SHORT).show();
                                 }
-                        }catch (ParseException e){
+                            } else {
+                                Toast.makeText(activity_configuracoes.this, "Preencha campo ciclo", Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (ParseException e) {
                             Toast.makeText(activity_configuracoes.this, "Data de nascimento incorreta!! ", Toast.LENGTH_SHORT).show();
                         }
-                    }else {
+                    } else {
                         Toast.makeText(activity_configuracoes.this, "Preencha campo data", Toast.LENGTH_SHORT).show();
                     }
-                }else {
+                } else {
                     Toast.makeText(activity_configuracoes.this, "Preencha campo nome", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -230,7 +231,7 @@ public class activity_configuracoes extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 GestanteUser gtUser = dataSnapshot.getValue(GestanteUser.class);
-                Log.i("Firebase",dataSnapshot.getValue().toString());
+                Log.i("Firebase", dataSnapshot.getValue().toString());
                 edtNome.setText(gtUser.getNomeC());
                 edtNum.setText(gtUser.getCelular());
                 edtIdade.setText(gtUser.getIdade());
@@ -245,7 +246,6 @@ public class activity_configuracoes extends AppCompatActivity {
             }
         });
     }
-
 
 
     @Override
@@ -312,10 +312,10 @@ public class activity_configuracoes extends AppCompatActivity {
     public void atualizaFotouser(Uri url) {
 
         boolean retorno = UsuarioFireBase.atualizarFotoUser(url);
-        if (retorno){
+        if (retorno) {
             userLogado.setFoto(url.toString());
-            Toast.makeText(this, "sua foto foi alterada", Toast.LENGTH_SHORT).show();
-        }else {
+           // Toast.makeText(this, "sua foto foi alterada", Toast.LENGTH_SHORT).show();
+        } else {
             Toast.makeText(this, "sua foto não foi alterada", Toast.LENGTH_SHORT).show();
         }
 
@@ -347,7 +347,7 @@ public class activity_configuracoes extends AppCompatActivity {
         dialog.show();
     }
 
-    public void showProgressDialog(){
+    public void showProgressDialog() {
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setTitle("Atualizando foto");
         dialog.setMessage("Carregando....");
@@ -362,17 +362,17 @@ public class activity_configuracoes extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while (progressState <100){
-                    progressState +=20;
+                while (progressState < 100) {
+                    progressState += 20;
 
                     try {
                         Thread.sleep(1000);
-                    }catch (InterruptedException e){
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     dialog.setProgress(progressState);
                 }
-                if (progressState>=100){
+                if (progressState >= 100) {
                     dialog.dismiss();
                 }
             }
@@ -380,27 +380,92 @@ public class activity_configuracoes extends AppCompatActivity {
     }
 
 
-public String calcData (String data){
-        Log.i("Entrada","dataNova: " + data);
+    public String calcData(String data) {
+        String diafinal, mesFinal;
+        int diasdoMes =0;
+
+        int mesArray[];
+        mesArray = new int[13];
+        mesArray[0] = 0;
+        mesArray[1] = 31;
+        mesArray[2] = 28;
+        mesArray[3] = 31;
+        mesArray[4] = 30;
+        mesArray[5] = 31;
+        mesArray[6] = 30;
+        mesArray[7] = 31;
+        mesArray[8] = 31;
+        mesArray[9] = 30;
+        mesArray[10] = 31;
+        mesArray[11] = 30;
+        mesArray[12] = 31;
+
+        Log.i("Entrada", "dataNova: " + data);
         int dia = Integer.parseInt(data.substring(0, 2));
-        int meses = Integer.parseInt(data.substring(3, 5));
+        int mes = Integer.parseInt(data.substring(3, 5));
         int ano = Integer.parseInt(data.substring(6, 10));
+
 
         int diaAtual = dia + 7;
         int mesAtual = 0;
         int anoAtual = 0;
 
-        if (meses <= 3) {
-            mesAtual = meses +9;
-            anoAtual = ano;
-        }else{
+        if(mes <= 3 ){
+            mesAtual = mes +9;
+            if(mesAtual >=12){
+                //pegando quantidade de dias da variavel => mes;
+                for(int i = 0 ; i < mesArray.length ; i ++){
+                    if(mesAtual == i){
+                       // System.out.println(i+"ª:"+mesArray[i]);
+                        diasdoMes = mesArray[i];
+                    }
+                    //System.out.println(i+"ª:"+mesArray[i]);
+                }
+                diaAtual = diaAtual - diasdoMes;
+                mesAtual = (mesAtual + 1) - (12);
+                anoAtual = ano + 1;
+            }else if(mesAtual< 12){
+                mesAtual = mesAtual+1;
+                for (int i = 0; i < mesArray.length; i++) {
+                    if(mesAtual == i){
+                        //System.out.println(i+"ª:"+mesArray[i]);
+                        diasdoMes = mesArray[i];
+                    }
+                }
+                diaAtual = diasdoMes - dia;
+            }
             diaAtual = diaAtual ;
-            mesAtual = (meses -3)+ 1;
-            anoAtual = ano + 1;
+            anoAtual = ano;
+
+        }else{
+            mesAtual = mes -3;
+            anoAtual = ano +1;
+            if(diaAtual > 30 || diaAtual > 31){
+                mesAtual = mesAtual+1;
+                for (int i = 0; i < mesArray.length; i++) {
+                    if(mesAtual == i){
+                        //System.out.println(i+"ª:"+mesArray[i]);
+                        diasdoMes = mesArray[i];
+                    }
+                }
+                diaAtual = diaAtual - diasdoMes;
+            }else{
+                mesAtual = mes -3;
+                anoAtual = ano;
+
+            }
 
         }
-        Log.i("Saida", "dataNova: " + diaAtual+"/"+mesAtual+"/"+anoAtual);
+        diafinal = Integer.toString(diaAtual);
+        mesFinal = Integer.toString(mesAtual);
+        if (diafinal.length() < 2) {
+            diafinal = "0"+diafinal;
+        }
+        if ( mesFinal.length() < 2) {
+            mesFinal = "0"+mesFinal;
+        }
+            Log.i("Saida", "dataNova: " + diafinal+"/" +mesFinal+ "/"+anoAtual);
 
-        return data;
-}
+        return data = diafinal+"/" +mesFinal+ "/"+anoAtual;
+    }
 }
